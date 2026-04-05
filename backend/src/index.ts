@@ -5,7 +5,8 @@ import app from './app'
 
 const PORT = Number(process.env.PORT) || 4000
 
-app.listen(PORT, () => {
+// Adicionamos '0.0.0.0' para permitir conexões externas ao container
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🐕 Dumb Construtor API running on port ${PORT}`)
-  console.log(`   ENV: ${process.env.NODE_ENV}`)
+  console.log(`    ENV: ${process.env.NODE_ENV}`)
 })
